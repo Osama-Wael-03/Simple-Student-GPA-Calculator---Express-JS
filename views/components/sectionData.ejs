@@ -1,0 +1,59 @@
+<% for(let iterator of data){ %>
+  <section class="card">
+    <article class="card-top-content">
+      <div class="card-top-content-leading">
+
+        <span class="name-first-char">Student</span>
+        <div class="student-info">
+
+          <span>
+            <%= iterator.std_full_name %>
+          </span>
+          <span>
+            <%= iterator.std_number %>
+          </span>
+        </div>
+      </div>
+      <a href="#">
+        <i class="fa-solid fa-xmark delete-row"></i>
+      </a>
+    </article>
+    <article class="card-marks">
+      <section class="mark-info">
+        <span>Mid-Term</span>
+        <span>
+          <%= iterator.mid_term_mark %>
+        </span>
+      </section>
+      <section class="mark-info">
+        <span>Final-Term</span>
+        <span>
+          <%= iterator.final_mark %>
+        </span>
+      </section>
+      <section class="mark-info">
+        <span>Activities</span>
+        <span>
+          <%= iterator.activities_mark %>
+        </span>
+      </section>
+      <section class="mark-info">
+        <span>Net Mark</span>
+        <span>
+          <%= iterator.net_mark %>
+        </span>
+      </section>
+      <section class="mark-info">
+        <span>Actions</span>
+        <span>
+          <form action="/students/<%= iterator.std_id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button id="deleteButton" class="fa-solid fa-trash-can fa-lg">
+              
+            </button>
+          </form>
+        </span>
+      </section>
+    </article>
+  </section>
+  <% } %>

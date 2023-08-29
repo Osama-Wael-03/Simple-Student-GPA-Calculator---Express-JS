@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <section class="form-section">
+      <header class="form-header">
+        <article class="form-header_content">
+          <span class="form-title">Average Calculator</span>
+          <p class="form-info">
+            An average calculator for students is a tool that helps students quickly determine the average, or mean, of
+            a set of numbers. It simplifies the process of adding up a series of values (such as test scores, grades, or
+            numerical data) and dividing the sum by the total count of values. This provides students with a clear and
+            concise way to understand the overall performance or trend of their data, making it easier to assess their
+            progress or make informed decisions based on the calculated average.
+          </p>
+        </article>
+        <figure class="form-header_img">
+          <img src="https://img.freepik.com/free-vector/calculator-concept-illustration_114360-2686.jpg?w=2000"
+            alt="" />
+        </figure>
+      </header>
+      <h5>Search about your marks here :</h5>
+      <section class="form-section">
+        <%- include('./components/serchForm.ejs') %>
+      </section>
+
+
+      <section>
+        <%- include('./components/sectionData') %>
+          
+      </section>
+      <h5>Sign up here..</h5>
+      <%- include('./components/form') %>
+
+    </section>
+
+
+    <section>
+
+
+      
+      
+
+    </section>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+
+
+    <form class="marks-form" method="get" action="/students/show">
+      <div>
+        <label for="student-num" class="form-label" id="labelSearch">Enter Student Number: </label>
+        <input type="number" id="student-num" name="std_number" class="form-input" placeholder="Enter Student Number" />
+        <button type="submit" id="searchButton">
+          <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+        </button>
+      </div>
+    </form>
+
+    
+    
+      <% if(data.length > 0){ %>
+      <div>
+        <p>Student Number: <%= data[0].std_number %>
+        </p>
+      </div>
+      <% } else if(data.length == 0) { %>
+        <p>No student data found.</p> 
+        <%}%>
+
+        <% if (locals.errorMessage) { %>
+
+          <div class="error-alert" role="alert">
+            <ul>
+            <% for(i of locals.errorMessage){ %>
+              <li><%= i.msg %></li>
+              <% } %>
+          </ul>
+          </div>
+        <% } %>
+    
